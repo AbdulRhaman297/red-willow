@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "red-willow"
+version = "0.1.0"
+description = "Jarvis-like CLI assistant for quick lookups (Shodan, ipinfo, OpenWeather, Wikipedia)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "AbdulRhaman297" }]
+
+[project.urls]
+Repository = "https://github.com/AbdulRhaman297/red-willow"
+
+[project.scripts]
+jarvis = "main:main"

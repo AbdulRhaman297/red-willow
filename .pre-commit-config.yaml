@@ -1,0 +1,38 @@
+repos:
+  - repo: https://github.com/psf/black
+    rev: 26.1.0
+    hooks:
+      - id: black
+        language_version: python
+  - repo: https://github.com/PyCQA/isort
+    rev: 7.0.0
+    hooks:
+      - id: isort
+        name: isort
+        language_version: python
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.3.0
+    hooks:
+      - id: flake8
+        args: [--max-line-length=79]
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+
+  # Local fallback hooks: useful when remote hooks cannot be fetched (CI or offline)
+  - repo: local
+    hooks:
+      - id: black-local
+        name: black (local)
+        entry: black
+        language: system
+        types: [python]
+      - id: flake8-local
+        name: flake8 (local)
+        entry: flake8
+        language: system
+        types: [python]

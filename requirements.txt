@@ -1,0 +1,23 @@
+requests
+pyttsx3
+SpeechRecognition
+# Optional: pyaudio for microphone (may require system packages — portaudio)
+pyaudio
+python-dotenv
+
+# New AI / memory libs for Jarvis hybrid assistant
+groq
+google-genai
+chromadb
+sentence-transformers
+pocketsphinx
+pystray
+pillow
+
+# Test tools
+pytest
+coverage
+# Dev tools
+black
+flake8
+pre-commit
